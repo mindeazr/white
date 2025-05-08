@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Enterprises LLC - A Total Build Company</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="White Enterprises LLC – A Total Build Company">
+    <meta property="og:description" content="We Build It! Craftsmanship, Honesty & Integrity.">
+    <meta property="og:image" content="https://yourdomain.com/assets/images/hero.png">
+    <meta property="og:url"   content="https://yourdomain.com/">
+
+    <!-- Tailwind & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        /* Hero Animation */
+        .hero-title {
+            animation: slideInFromLeft 1s ease-out forwards;
+            opacity: 0;
+        }
+        .hero-slogan {
+            animation: fadeIn 1s ease-out 1s forwards;
+            opacity: 0;
+        }
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0);        opacity: 1; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Ensure videos fill their containers nicely */
+        .video-tile video, .promo-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Video tile overlay */
+        .video-tile-overlay {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            display: flex; align-items: flex-start; justify-content: center;
+            background-color: rgba(0, 0, 0, 0.1);
+            cursor: pointer; transition: background-color 0.3s ease;
+            padding-top: 1rem;
+        }
+        .video-tile-overlay:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        .video-tile-overlay h3 {
+            font-size: 1.5rem; font-weight: bold;
+            color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+        }
+
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Audio button */
+        #audioButton {
+            position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+            background-color: #1f2937; color: white; border: none;
+            border-radius: 50%; width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        #audioButton:hover { background-color: #374151; }
+        #audioButton svg { width: 24px; height: 24px; }
+
+        /* Section padding */
+        section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        #hero { padding-top: 0; }
+
+        /* Gallery hover/click */
+        .gallery-item img {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover img:not(.clicked) {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .gallery-item img.clicked {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px -5px rgba(0,0,0,0.2),
+                        0 8px 10px -6px rgba(0,0,0,0.1);
+            position: relative; z-index: 10;
+        }
+
+        /* Promo video aspect ratio */
+        .promo-video .aspect-video-container {
+            position: relative; width: 100%; padding-bottom: 56.25%; height: 0;
+            overflow: hidden; background-color: #000;
+        }
+        .promo-video .aspect-video-container video {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- …rest of your body stays exactly the same… -->
+</body>
+</html>
